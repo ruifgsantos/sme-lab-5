@@ -100,8 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
           options: MapOptions(
             interactiveFlags: InteractiveFlag.all & ~InteractiveFlag.rotate,
             center: LatLng(38.6930771, -9.211939),
-            zoom: 15,
-            onTap: (pos, latLng) => _onMapClick(null, latLng)
+            zoom: 15
           ),
           children: [
             TileLayer(
