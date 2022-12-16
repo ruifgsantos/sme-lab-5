@@ -7,7 +7,13 @@ Neste laboratório iremos desenvolver uma aplicação em Flutter que permite a u
 
 ## Map App
 
-o final do laboratório é esperado que consigamos visualizar um ecrã de home semelhante ao da figura abaixo:
+No final do laboratório é esperado que consigamos visualizar um ecrãs semelhantes aos das figuras abaixo:
+
+<p style="display: flex; align-items: center; justify-content: space-between;">
+    <img src="images/maps1.jpg" width="30%">
+    <img src="images/maps2.jpg" width="30%">
+    <img src="images/maps3.jpg" width="30%">
+</p>
 
 
 ## Criação do projeto
@@ -114,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
 Quando executarem finalmente, o ecrã deve estar algo parecido com a seguinte imagem:
 
 <p align="center">
-    <img src="images/maps1.jpg">
+    <img src="images/maps1.jpg" width="50%">
 </p>
 
 Vamos criar agora um botão para nos colocar na posição atual, modificando o ficheiro **main.dart** com os seguintes trechos de código:
@@ -175,6 +181,12 @@ class _MyHomePageState extends State<MyHomePage> {
 * O método *_getCurrentPosition* executa os pedidos de permissões para a utilização dos sensores de geolocalização e verifica o tipo de permissões. Neste caso, as permissões que podem ser validadas são as de utilizar uma vez, ou apenas durante a aplicação. Assim, sempre que seja necessário saber a posição atual, são verificadas as permissões.
 * O *_goToCurrentPosition* utiliza o *MapController* para realizar operações sobre o mapa, nomeadamente, anmimar a camara do mapa para que se desloque à posição atual do telemovel.
 * O *floating action button* invoca a função anteriormente referida.
+
+Devem visualizar o botão no canto inferior direito:
+
+<p align="center">
+    <img src="images/maps4.jpg" width="50%">
+</p>
 
 Vamos agora adicionar um *listener* ao mapa para que este quando deteta *clicks* execute um comportamento. Este será maioritariamente relevante quando quisermos guardar pontos de interesse. Adicionemos o trecho de código ao ficheiro **main.dart**.
 
@@ -594,6 +606,7 @@ Future<dynamic> addPoint(PointInterest pointInterest) => _firebaseFireStore
 3. Sempre que um ponto for favorito, deve ser apresentado um outro tipo de ícone;
 4. Devem criar uma forma que seja possível visualizar a lista de favoritos fora do mapa. Podem colocar num Modal, num Dialog ou até mesmo uma nova rota;
 5. Se fizerem refresh da aplicação, vão verificar que os pontos desaparecem, isto deve-se ao facto que não estão a ser inicializados quando a aplicação é executada pela primeira vez. Adicionem este comportamento.
+6. (Opcional) Adicionem uma funcionalidade extra (da vossa imaginação) que interaja com o Mapa. Para este exercicio devem utilizar o *[MapController](https://pub.dev/documentation/flutter_map/latest/flutter_map/MapController-class.html)*.
 
 # Dicas para os exercicios
 
