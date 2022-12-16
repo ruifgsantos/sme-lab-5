@@ -589,7 +589,7 @@ Future<dynamic> addPoint(PointInterest pointInterest) => _firebaseFireStore
 
 # Exercicios
 
-1. Como podem reparar, falta completar um método para que seja efetivamente possível adicionar o marcador no mapa. Devem completar o método *AddPoint* no ficheiro **point_form_cubit.dart**;
+1. Como podem reparar, falta completar um método para que seja efetivamente possível adicionar o marcador no mapa e no firebase. Devem completar o método *AddPoint* no ficheiro **point_form_cubit.dart**;
 2. Devem introduzir o conceito de pontos favoritos! Isto pode ser feito de múltiplas formas, contudo, é aconselhável olhar para as dicas no final do enunciado.. :)
 3. Sempre que um ponto for favorito, deve ser apresentado um outro tipo de ícone;
 4. Devem criar uma forma que seja possível visualizar a lista de favoritos fora do mapa. Podem colocar num Modal, num Dialog ou até mesmo uma nova rota;
@@ -629,7 +629,7 @@ _firebaseFireStore
   void initState() {
     super.initState();
     _mapController = MapController();
-    _firebaseStoreRepository.getAllPoints().then((points) => markers.add(...points))
+    _firebaseStoreRepository.getAllPoints().then((points) => markers.addAll(points))
   }
 ~~~
 
