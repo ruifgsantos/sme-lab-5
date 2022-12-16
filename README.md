@@ -30,7 +30,7 @@ Em seguida, devem abrir o Android studio na diretoria criada com a instrução a
 Após o processo de configuração da Firebase SDK no novo projeto, necessitamos de software adicional ao disponibilizado pelo SDK fo Flutter que nos permite aceder aos serviços necessários de mapa e Firebase.
 
 ~~~
-flutter pub add firebase_core cloud_firestore flutter_bloc bloc location formz flutter_map
+flutter pub add firebase_core cloud_firestore flutter_bloc bloc location formz flutter_map equatable
 flutter pub get 
 ~~~
 
