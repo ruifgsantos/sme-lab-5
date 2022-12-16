@@ -160,8 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     void _goToCurrentPosition() {
         _getCurrentPosition().then((LatLng location) {
-          _controller?.animateCamera(CameraUpdate.newCameraPosition(
-              CameraPosition(target: location, zoom: 15)));
+          _mapController.move(location, 15);
         });
     }
 
